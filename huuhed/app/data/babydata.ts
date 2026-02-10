@@ -142,7 +142,7 @@ export const babydata=[
   {
     cid: 2,
     cname: "Жимс, хүнс",
-    cicon: "food_icon",
+    cicon: "apple",
     csound: "\\sound\\cat\\2.mp3",
     subcat: [
       {
@@ -282,7 +282,7 @@ export const babydata=[
   {
     cid: 3,
     cname: "Тээврийн хэрэгсэл",
-    cicon: "transport_icon",
+    cicon: "bus",
     csound: "\\sound\\cat\\3.mp3",
     subcat: [
       {
