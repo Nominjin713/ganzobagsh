@@ -2,7 +2,7 @@ export const babydata=[
   {
     cid: 1,
     cname: "Амьтан",
-    cicon: "animal_icon",
+    cicon: "paw",
     csound: "\\sound\\cat\\1.mp3",
     subcat: [
       {

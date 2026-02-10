@@ -1,19 +1,49 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, FlatList } from "react-native";
 import {babydata} from "./data/babydata";
+import { endEvent } from "react-native/Libraries/Performance/Systrace";
+import Foundation from '@expo/vector-icons/Foundation';
+
+
 export default function Page() {
-   const firstCategory = babydata[0];
   return (
     <View style={styles.container}>
+      <FlatList
+        data={babydata}
+        keyExtractor={(item) => item.cid.toString()}
+        horizontal
+        renderItem={({ item }) => (
+          <View 
+          style={{
+            height:100,
+            margin:10,
+            padding:10,
+            backgroundColor:"#967f7f" ,
+
+          }}>
+            
+           <Text style={{ fontSize: 40 }}>
+            <Foundation name="photo" size={24} color="black" />
+            {item.cname}
+          </Text>
+          </View>
+         
+        )}
+      />
+
       <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.title}>
-          {firstCategory.cname}
-        </Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        {/* <Text style={styles.title}>Cat size {babydata.length}</Text>
+        <Text style={styles.title}>{babydata[0].cid} cat id</Text>
+        <Text style={styles.title}>{babydata[0].cname} cat name</Text>
+        <Text style={styles.title}>{babydata[0].cicon} cat icon name</Text>
+        <Text style={styles.subtitle}>
+          This is the first page of your app.
+        </Text> */}
       </View>
+
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
